@@ -58,6 +58,7 @@ const benchmarkOllamaWithLangchain = async (input: string, model: string, baseUr
 
 const runBenchmark = async (tests: string[], model: string, baseUrl: string) => {
 	const benchmarkDateTime = new Date().toISOString().replace(/:/g, '-').replace(/\./g, '-')
+	const outputFilename = `./results/benchmark_${model}_${benchmarkDateTime}.md`
 
 	const results: {
 		query: string
@@ -125,7 +126,7 @@ const runBenchmark = async (tests: string[], model: string, baseUrl: string) => 
 ${tests.map((test, i) => `| ${i + 1}. ${test} |`).join('\n')}
 `
 
-	await writeFile(`./results/benchmark-${benchmarkDateTime}.md`, summaryTemplate, { flag: 'a' })
+	await writeFile(outputFilename, summaryTemplate, { flag: 'a' })
 
 	// ====================
 	// By query results
@@ -149,10 +150,10 @@ ${query}
 ### **Response**
 ${response}
 `
-		await writeFile(`./results/benchmark-${benchmarkDateTime}.md`, template, { flag: 'a' })
+		await writeFile(outputFilename, template, { flag: 'a' })
 	}
 
-	console.log(`📄 Results saved to File: ./results/benchmark-${benchmarkDateTime}.md`)
+	console.log(`📄 Results saved to File: ${outputFilename}`)
 	console.log('🎉 Benchmark completed successfully')
 }
 
