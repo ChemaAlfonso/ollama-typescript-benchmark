@@ -1,0 +1,19 @@
+{
+	"name": "ollama-benchmark",
+	"version": "1.0.0",
+	"main": "index.js",
+	"scripts": {
+		"start": "tsx ./benchmark.ts",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"description": "",
+	"dependencies": {
+		"@langchain/community": "^0.2.33",
+		"@langchain/core": "^0.2.32",
+		"@langchain/ollama": "^0.0.4",
+		"tsx": "^4.19.1"
+	}
+}
