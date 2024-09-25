@@ -7,8 +7,8 @@
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"keywords": [],
-	"author": "",
-	"license": "ISC",
+	"author": "Chema Alfonso <hola@chemaalfonso.com>",
+	"license": "MIT",
 	"description": "",
 	"dependencies": {
 		"@langchain/community": "^0.2.33",
