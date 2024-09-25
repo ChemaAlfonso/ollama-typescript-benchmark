@@ -182,7 +182,7 @@ const tests = [
 	'Explain the phenomenon of **global warming** and its possible consequences for the planet.'
 ]
 const model = 'gemma2:2b'
-const baseUrl = 'http://localhost:4022'
+const baseUrl = 'http://localhost:11434'
 const testRuns = 1
 
 // ===================================
