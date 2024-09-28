@@ -58,7 +58,7 @@ const benchmarkOllamaWithLangchain = async (input: string, model: string, baseUr
 
 const runBenchmark = async (tests: string[], model: string, baseUrl: string) => {
 	const benchmarkDateTime = new Date().toISOString().replace(/:/g, '-').replace(/\./g, '-')
-	const outputFilename = `./results/benchmark_${model}_${benchmarkDateTime}.md`
+	const outputFilename = `./results/${benchmarkDateTime}_${model}.md`
 
 	const results: {
 		query: string
@@ -71,8 +71,8 @@ const runBenchmark = async (tests: string[], model: string, baseUrl: string) => 
 		totalTokens: number
 	}[] = []
 
-	// Heating up
-	console.log('🔥 Heating up...')
+	// Warming up
+	console.log('🔥 Warming up...')
 	await benchmarkOllamaWithLangchain('Hello', model, baseUrl)
 
 	// Run benchmark
