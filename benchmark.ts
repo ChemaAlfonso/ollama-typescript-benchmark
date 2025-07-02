@@ -12,7 +12,7 @@ import { writeFile } from 'fs/promises'
 // Benchmark info
 // ===================================
 // This script is used to benchmark the Ollama model with Langchain.
-// The benchmark not evaluate the quality of the responses, only the model's performance.
+// The benchmark does not evaluate the quality of the responses, only the model's performance.
 
 // It sends a list of prompts to the model and records the totals and individual test results including:
 // - Total and by test time taken
