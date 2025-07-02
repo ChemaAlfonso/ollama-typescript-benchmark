@@ -190,7 +190,9 @@ const testRuns = 1
 // Run
 // ===================================
 console.clear()
-for (let i = 0; i < testRuns; i++) {
-	console.log(`Starting benchmark run ${i + 1}/${testRuns}`)
-	runBenchmark(tests, model, baseUrl)
-}
+;(async () => {
+        for (let i = 0; i < testRuns; i++) {
+                console.log(`Starting benchmark run ${i + 1}/${testRuns}`)
+                await runBenchmark(tests, model, baseUrl)
+        }
+})()
