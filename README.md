@@ -37,7 +37,7 @@ The results are saved to a markdown (.md) file for analysis.
 
 1. Clone the repository:
     ```bash
-    git clone
+    git clone https://github.com/ChemaAlfonso/ollama-typescript-benchmark.git
     ```
 2. Install dependencies:
     ```bash
