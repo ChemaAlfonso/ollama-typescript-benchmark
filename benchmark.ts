@@ -30,9 +30,9 @@ import { writeFile } from 'fs/promises'
 // ===================================
 const benchmarkOllamaWithLangchain = async (input: string, model: string, baseUrl: string) => {
 	const llm = new ChatOllama({ baseUrl, model, streaming: false })
-	const promp = ChatPromptTemplate.fromTemplate(input)
+        const prompt = ChatPromptTemplate.fromTemplate(input)
 
-	const { response_metadata, usage_metadata, content } = await promp.pipe(llm).invoke({})
+        const { response_metadata, usage_metadata, content } = await prompt.pipe(llm).invoke({})
 
 	const { total_duration } = response_metadata
 	const { output_tokens, total_tokens, input_tokens } = usage_metadata!
